@@ -35,8 +35,8 @@ public class CardOrderTest {
     @Test
     void shouldSubmitFormWithSimpleName() {
         driver.get("http://localhost:9999/");
-        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Иванов");
-        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112233");
+        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Petr Petrov");
+        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112223");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
         String text = driver.findElement(By.className("paragraph")).getText();
@@ -47,7 +47,7 @@ public class CardOrderTest {
     void shouldSubmitFormWithDoubleName() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Анна-Мария Иванова");
-        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112233");
+        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112223");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
         String text = driver.findElement(By.className("paragraph")).getText();
@@ -58,7 +58,7 @@ public class CardOrderTest {
     void shouldSubmitFormWithDoubleSurname() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Анна Иванова-Петрова");
-        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112233");
+        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112223");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
         String text = driver.findElement(By.className("paragraph")).getText();
@@ -69,7 +69,7 @@ public class CardOrderTest {
     void shouldSubmitFormWithDoubleNameAndSurname() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Анна-Мария Иванова-Петрова");
-        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112233");
+        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112223");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
         String text = driver.findElement(By.className("paragraph")).getText();
