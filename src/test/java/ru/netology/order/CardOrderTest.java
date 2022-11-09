@@ -35,7 +35,7 @@ public class CardOrderTest {
     @Test
     void shouldSubmitFormWithSimpleName() {
         driver.get("http://localhost:9999/");
-        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Petr Petrov");
+        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys(" Петр Петров");
         driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991112223");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button__text")).click();
